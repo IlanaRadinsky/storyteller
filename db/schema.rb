@@ -10,8 +10,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20170219041627) do
+ActiveRecord::Schema.define(version: 20170219065416) do
+
+  create_table "mediafiles", force: :cascade do |t|
+    t.string   "title"
+    t.text     "description"
+    t.string   "collection"
+    t.string   "language"
+    t.text     "post_permissions"
+    t.string   "location"
+    t.string   "interviewer_firstname"
+    t.string   "interviewer_lastname"
+    t.string   "interviewee_firstname"
+    t.string   "interviewee_lastname"
+    t.string   "contact_email"
+    t.integer  "user_id"
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
+    t.index ["user_id"], name: "index_mediafiles_on_user_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "provider"
@@ -21,19 +38,9 @@ ActiveRecord::Schema.define(version: 20170219041627) do
     t.datetime "oauth_expires_at"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
-=======
-ActiveRecord::Schema.define(version: 20170219052652) do
-
-  create_table "users", force: :cascade do |t|
-    t.string   "name"
     t.string   "email"
     t.integer  "age"
     t.string   "gender"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
-    t.string   "password_digest"
-    t.index ["email"], name: "index_users_on_email", unique: true
->>>>>>> origin/modeling-users
   end
 
 end
