@@ -5,7 +5,7 @@
 
 	<% @mediafiles.each do |mediafile| %>
 		<h3><%= mediafile.title %>: <%= mediafile.description %></h3>
-		<%= mediafile.attachment_url %>
+		<%= image_tag mediafile.attachment_url if mediafile.attachment?%>
 	<% end %>
 </div>
 

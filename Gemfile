@@ -42,6 +42,7 @@ gem 'carrierwave', '~>0.9'
 
 gem 'bootstrap-sass', '~>2.3.2'
 
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
