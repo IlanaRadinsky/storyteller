@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170219065416) do
+ActiveRecord::Schema.define(version: 20170219142826) do
 
   create_table "mediafiles", force: :cascade do |t|
     t.string   "title"
@@ -41,6 +41,7 @@ ActiveRecord::Schema.define(version: 20170219065416) do
     t.string   "email"
     t.integer  "age"
     t.string   "gender"
+    t.string   "password_digest"
   end
 
 end
