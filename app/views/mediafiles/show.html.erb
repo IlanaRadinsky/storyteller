@@ -1,5 +1,11 @@
-<h2>Record Yourself!</h2>
+<h2>Thanks for Recording!</h2>
 
-<%= @mediafiles %>
+<h2>Your Media:</h2>
+
+<% @mediafiles.each do |mediafile| %>
+
+	<h3><%= mediafile.title %>: <%= mediafile.description %></h3>
+
+<% end %>
 
 <p>Share to Facebook?</p>

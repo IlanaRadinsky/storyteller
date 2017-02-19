@@ -6,13 +6,15 @@ class MediafilesController < ApplicationController
 
   def create
 	@current_user=User.find(session[:user_id])
-	@mediafile=Mediafile.create(mediafile_params)
+	@mediafile=Mediafile.new(mediafile_params)
 	@mediafile.user_id= @current_user.id
-	redirect_to mediafiles_path
+	@mediafile.save
+	redirect_to mediafile_path(@mediafile.id)
   end
 
   def show
-	@mediafiles=Mediafile.find(session[:user_id])
+	@current_user=User.find(session[:user_id])
+	@mediafiles=@current_user.mediafiles
   end
 
   def index
