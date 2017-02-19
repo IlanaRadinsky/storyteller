@@ -21,7 +21,7 @@ class MediafilesController < ApplicationController
   end
 
   def mediafile_params
-	  params.require(:mediafile).permit(:title, :description)
+	  params.require(:mediafile).permit(:title, :description, :attachment)
   end
 
 end

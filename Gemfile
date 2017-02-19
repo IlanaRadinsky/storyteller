@@ -38,6 +38,10 @@ gem 'genderize'
 
 gem 'nokogiri', '1.7.0.1'
 
+gem 'carrierwave', '~>0.9'
+
+gem 'bootstrap-sass', '~>2.3.2'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

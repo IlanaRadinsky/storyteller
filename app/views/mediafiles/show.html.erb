@@ -1,11 +1,12 @@
 <h2>Thanks for Recording!</h2>
 
-<h2>Your Media:</h2>
+<div class = "well">
+	<h2>Your Media:</h2>
 
-<% @mediafiles.each do |mediafile| %>
-
-	<h3><%= mediafile.title %>: <%= mediafile.description %></h3>
-
-<% end %>
+	<% @mediafiles.each do |mediafile| %>
+		<h3><%= mediafile.title %>: <%= mediafile.description %></h3>
+		<%= mediafile.attachment_url %>
+	<% end %>
+</div>
 
 <p>Share to Facebook?</p>

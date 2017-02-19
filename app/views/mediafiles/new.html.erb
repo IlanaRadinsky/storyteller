@@ -1,9 +1,14 @@
-<h1>Create new mediafile page</h1>
+<h1>Create or Upload Your Media File</h1>
 
-<%= form_for @mediafile, url: {action: "create"} do |f| %>
-	 <%= f.label :title %>
-	 <%= f.text_field :title %>
-	 <%= f.label :description %>
-	 <%= f.text_area :description %>
-	 <%= f.submit "Create Media" %>
-<% end %>
+
+<div class = "well">
+	<%= form_for @mediafile, url: {action: "create"} do |f| %>
+		<%= f.label :title %>
+		<%= f.text_field :title %>
+		<%= f.label :description %>
+		<%= f.text_area :description %>
+		<%= f.label :attachment %>
+		<%= f.file_field :attachment %>
+		<%= f.submit "Create Media", class: "btn btn-primary" %>
+	<% end %>
+</div>
