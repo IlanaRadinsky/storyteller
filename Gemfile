@@ -36,6 +36,8 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem 'genderize'
 
+gem 'nokogiri', '1.7.0.1'
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
